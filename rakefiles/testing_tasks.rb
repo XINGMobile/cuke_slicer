@@ -4,7 +4,8 @@ namespace 'cuke_slicer' do
   task :run_rspec_tests => [:clear_old_results] do # rubocop:disable Style/HashSyntax
     puts Rainbow('Running RSpec tests...').cyan
     completed_process = CukeSlicer::CukeSlicerHelper.run_command(['bundle', 'exec', 'rspec',
-                                                                  '--pattern', 'testing/rspec/spec/**/*_spec.rb'])
+                                                                  '--pattern', './testing/rspec/spec/**/*_spec.rb',
+                                                                  '--require', './testing/rspec/spec_helper.rb'])
 
     raise(Rainbow('RSpec tests encountered problems!').red) unless completed_process.exit_code.zero?
 
