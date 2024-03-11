@@ -14,3 +14,8 @@ require_relative 'rakefiles/testing_tasks'
 
 
 task :default => 'cuke_slicer:test_everything' # rubocop:disable Style/HashSyntax
+
+
+# refactored raketasks
+require_relative 'lib/cuke_slicer.rb'
+Dir['tasks/**/*.rb'].each { |file| require_relative file }

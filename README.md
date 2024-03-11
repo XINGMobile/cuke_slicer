@@ -68,3 +68,20 @@ See [CONTRIBUTING.md](https://github.com/enkessler/cuke_slicer/blob/master/CONTR
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+
+
+
+## Release
+
+In order to have your changes available you need to:
+
+- Create a Pull Request that include below changes (or aggregate them with your changes)
+  - Bump the version in `lib/cuke_slicer/version.rb` (try to follow [semantic versioning](https://semver.org))
+  - Run `bundle` (which will regenerate the `Gemfile.lock`)
+- Get the Pull Request approved and merged.
+- Create and Publish the new tag based on the version by:
+  - Switching locally to `master` branch and pulling the update version that was merged above
+  - Run `bundle exec rake tags:create`.
+
+Now you will be able to update the needed tag in the repositories needing it.
