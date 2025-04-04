@@ -74,6 +74,12 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Release
 
+### Release Gem
+
+Follow [Configure JFROG for Ruby](https://fantastic-couscous-zwrnp14.pages.github.io/getting-started/configurations/jfrog-ruby#) Documentation.
+
+### (Legacy) Release Tag
+
 In order to have your changes available you need to:
 
 - Create a Pull Request that include below changes (or aggregate them with your changes)
@@ -81,7 +87,7 @@ In order to have your changes available you need to:
   - Run `bundle` (which will regenerate the `Gemfile.lock`)
 - Get the Pull Request approved and merged.
 - Create and Publish the new tag based on the version by:
-  - Switching locally to `master` branch and pulling the update version that was merged above
+  - Switching locally to `main` branch and pulling the update version that was merged above
   - Run `bundle exec rake tags:create`.
 
 Now you will be able to update the needed tag in the repositories needing it.
